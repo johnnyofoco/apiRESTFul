@@ -11,7 +11,7 @@ const app = express();
 db.connect();
 
 // origens permitidas a consumir a API
-const allowedOrigins = ["http://127.0.0.1:5501", "http://www.app.com.br"];
+const allowedOrigins = ["http://127.0.0.1:3000", "http://www.app.com.br"];
 
 // habilta CORS (cors() torna a API pública, disponível a todos os dominios)
 // app.use(cors())

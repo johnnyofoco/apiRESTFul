@@ -6,7 +6,7 @@ function connect() {
 mongoose.set('strictQuery', true)
 
   mongoose.connect(
-    "mongodb://localhost:27017/api-restful?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
+    "mongodb://localhost:27017/api-restful"
   );
 
   const db = mongoose.connection;

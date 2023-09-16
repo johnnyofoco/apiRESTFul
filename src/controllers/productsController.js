@@ -52,7 +52,7 @@ async function put(req, res) {
 async function remove(req, res) {
   const { id } = req.params;
 
-  const remove = await ProductsModel.deleteOne({ _id: id });
+  const remove = await ProductsModel.deleteOne({ _id: id.replace('id=', '') });
 
   const message = remove ? "product removed" : "error";
 
