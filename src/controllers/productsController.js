@@ -2,7 +2,7 @@ const ProductsModel = require("../models/productsModel");
 
 async function get(req, res) {
   const { id } = req.params;
-
+  
   // se tiver id atribuiu o id ao obj caso contrário envia null
   // assim o find() irá funcionar pra retornar todos os itens
   // como tbm apenas um único item
@@ -42,17 +42,12 @@ async function put(req, res) {
     product,
   });
 
-  // Metódo que atualiza porém retorna o produto antigo na resposta
-  /*
-    const product = await ProductsModel.findOne({_id: id})
-     await product.updateOne(req.body)
-*/
 }
 
 async function remove(req, res) {
   const { id } = req.params;
 
-  const remove = await ProductsModel.deleteOne({ _id: id.replace('id=', '') });
+  const remove = await ProductsModel.deleteOne({ _id: id });
 
   const message = remove ? "product removed" : "error";
 

@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 
 function connect() {
-//   mongoose.set("userNewUrlParser", true);
-//   mongoose.set("useUnifiedTopology", true);
 mongoose.set('strictQuery', true)
 
   mongoose.connect(
