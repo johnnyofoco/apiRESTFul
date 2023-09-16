@@ -21,10 +21,11 @@ app.use(
 
       //permitir acesso via mobile app (sem origem)
       if (!origin || origin === null) allowed = true;
-
+      
+      //restringir acessos baseado na lista de origens permitidas
       if (!allowedOrigins.includes(origin)) allowed = false;
 
-      callback(null, allowed);
+      callback(null, allowed); //mensagem, autorização
     },
   })
 );
